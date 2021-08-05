@@ -1,0 +1,1 @@
+select * from {{ ref('model.tellery_dbt_demo.my_second_dbt_model') }}
