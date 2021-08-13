@@ -1,1 +1,0 @@
-select * from {{ source('my_first_dbt_source', 'tellery_schema') }}
