@@ -1,0 +1,1 @@
+select * from {{ ref('product_category_total_sale_model') }}
