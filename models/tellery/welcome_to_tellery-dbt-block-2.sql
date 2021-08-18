@@ -1,1 +1,0 @@
-select * from {{ ref('welcome_to_tellery-dbt-block') }}

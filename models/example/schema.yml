@@ -1,13 +1,14 @@
 version: 2
 
 sources:
-  - name: tellery_schema
+  - name: public
     tables:
-      - name: my_first_dbt_source
+      - name: orders
+      - name: products
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
+  - name: product_order_model
+    description: "An order model includes detailed product information."
     columns:
       - name: id
         description: "The primary key for this table"
@@ -15,11 +16,20 @@ models:
           - unique
           - not_null
 
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
+  - name: product_category_total_sale_model
+    description: "Aggregate all orders by grouping by products category and calculate the sale total."
     columns:
-      - name: id
-        description: "The primary key for this table"
+      - name: category
+        description: "The type of products"
+        tests:
+          - unique
+          - not_null
+
+  - name: user_total_sale_model
+    description: "Aggregate all orders by grouping by user id and calculate the sale total."
+    columns:
+      - name: user_id
+        description: "The id of custom"
         tests:
           - unique
           - not_null
