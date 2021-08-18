@@ -4,21 +4,21 @@ version: "1.0.0"
 config-version: 2
 profile: "tellery_dbt_demo"
 source-paths:
-  - "models"
+- "models"
 analysis-paths:
-  - "analysis"
+- "analysis"
 test-paths:
-  - "tests"
+- "tests"
 data-paths:
-  - "data"
+- "data"
 macro-paths:
-  - "macros"
+- "macros"
 snapshot-paths:
-  - "snapshots"
+- "snapshots"
 target-path: "target"
 clean-targets:
-  - "target"
-  - "dbt_modules"
+- "target"
+- "dbt_modules"
 models:
   tellery_dbt_demo:
     example:
